@@ -1,0 +1,71 @@
+def addition():
+    print('addition')
+    n = float(input('enter the number'))
+    t =0
+    ans = 0 
+    while n!=0:
+        ans = ans+n
+        t+=1
+        n =float(input('enter the number: '))
+    return ans, t
+
+
+def subtraction():
+    print('subtraction')
+    n =float(input('enter the number: '))
+    t = 0
+    sum = 0
+    ans=sum
+    while n!=0:
+        ans = ans -n
+        t+=1
+        n =float(input('enter the number: '))
+    return ans, t
+
+def multiplication():
+    print('multiplication')
+    n =float(input('enter the number: '))
+    t=0
+    ans=1
+    while n!= 0:
+        ans = ans*n
+        t+=1
+        n =float(input('enter the number: '))
+    return ans,t
+
+def average():
+    an = []
+    an = addition()
+    t = an[1]
+    a = an[0]
+    ans = a/t
+    return ans, t
+
+#main...
+while True:
+    list = []
+
+    print('my first python program')
+    print(' simple calculator in python by Oluwo Lateef')
+    print("enter 'a' for addition")
+    print("enter 's' for subtraction")
+    print("enter 'm' for multiplication")
+    print("enter 'v' for average")
+    print("enter 'q' for quit")
+    c = input(' ')
+    if c!='q':
+        if c == 'a':
+            list = addition()
+            print('Ans = ', list[0], ' total inputs ', list[1])
+        elif c =='s':
+            list = subtraction()
+            print('Ans = ', list[0], ' total inputs ', list[1])
+        elif c == 'm':
+            list = multiplication()
+            print('Ans = ', list[0], ' total inputs ', list[1])
+        elif c == 'v':
+            list = average()
+            print('Ans = ', list[0], ' total inputs ', list[1])
+        else:
+            print('sorry, invalid character')
+    break
